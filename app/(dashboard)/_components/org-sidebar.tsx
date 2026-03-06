@@ -51,7 +51,7 @@ const OrgSideBar = () => {
           asChild
           size="lg"
           variant={favorite ? "ghost" : "secondary"}
-          className="font-normal justify-start px-2"
+          className="font-normal justify-start px-2 w-full"
         >
           <Link href="/">
             <LayoutDashboard className="h-4! w-4! mr-2" />
@@ -63,7 +63,7 @@ const OrgSideBar = () => {
           asChild
           size="lg"
           variant={favorite ? "secondary" : "ghost"}
-          className="font-normal justify-start px-2"
+          className="font-normal justify-start px-2 w-full"
         >
           <Link
             href={{
