@@ -10,7 +10,7 @@ const layout = ({ children }: DashboardLayoutProps) => {
   return (
     <main className="flex h-screen w-full">
       <SideBar />
-      <div className="flex w-full gap-x-4">
+      <div className="flex w-full gap-x-4 overflow-y-scroll">
         <OrgSideBar />
         <div className="w-full">
           <NavBar />
