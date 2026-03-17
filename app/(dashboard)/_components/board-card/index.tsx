@@ -7,6 +7,9 @@ import Footer from "./footer";
 import { useAuth } from "@clerk/nextjs";
 import { formatDistanceToNow } from "date-fns";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Actions } from "@/components/actions";
+import { Button } from "@/components/ui/button";
+import { MoreVertical } from "lucide-react";
 
 interface BoardCardProps {
   id: string;
@@ -39,6 +42,11 @@ const BoardCard = ({
         <div className="relative flex-1 bg-amber-50">
           <Image src={imageUrl} alt={title} fill className="object-center" />
           <Overlay />
+          <Actions side="right" id={id} title={title}>
+            <Button className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 bg-transparent hover:bg-transparent">
+              <MoreVertical className="text-white opacity-75 hover:opacity-100 transition-opacity h-5! w-5!" />
+            </Button>
+          </Actions>
         </div>
         <Footer
           title={title}
