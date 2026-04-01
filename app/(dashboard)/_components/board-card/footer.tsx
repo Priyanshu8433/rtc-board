@@ -7,7 +7,7 @@ interface FooterProps {
   authorLabel: string;
   createdAtLabel: string;
   isFavorite: boolean;
-  onClick: () => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   disabled: boolean;
 }
 
