@@ -1,4 +1,7 @@
 import Canvas from "../_components/canvas";
+import Loading from "../_components/loading";
+
+import { Room } from "../_components/room";
 
 interface BoardPageProps {
   params: Promise<{
@@ -8,10 +11,11 @@ interface BoardPageProps {
 
 const BoardPage = async ({ params }: BoardPageProps) => {
   const { boardId } = await params;
+
   return (
-    <div>
+    <Room roomId={boardId} fallback={<Loading />}>
       <Canvas boardId={boardId} />
-    </div>
+    </Room>
   );
 };
 
